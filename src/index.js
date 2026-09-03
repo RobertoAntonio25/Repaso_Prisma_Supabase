@@ -27,6 +27,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/upload", uploadRoutes);
 app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
+    console.log(`http://localhost:${PORT}`); 
 });
 //Tarea finall, findMany
