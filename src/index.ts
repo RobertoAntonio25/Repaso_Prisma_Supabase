@@ -3,7 +3,6 @@ import express, { Request, Response } from "express";
 import path from "path";
 import authRoutes from "./routes/auth.routes";
 import productRoutes from "./routes/product.routes";
-import userRoutes from "./routes/user.route";
 import uploadRoutes from "./routes/upload.routes";
 import dotenv from "dotenv";
 
