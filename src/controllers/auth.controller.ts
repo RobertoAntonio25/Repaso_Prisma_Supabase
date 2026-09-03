@@ -1,0 +1,46 @@
+import { Request, Response } from "express";
+import * as authService from "../services/auth/auth.service";
+
+/**
+ * CONTROLADOR DE REGISTRO
+ */
+// Promise<void> indica que esta función asíncrona no "retorna" un valor con 'return' al final,
+// sino que responde al cliente a través de 'res'.
+
+export const registerUser = async (
+  req: Request,
+  res: Response,
+): Promise<void> => {
+  //1. Pasamos el cuerpo de la peticion (req.body) al servicio de registro
+  const result = await authService.registerService(req.body);
+
+  //2. Verificamos si el servicio atrapo algun error o validacion
+  if (result.error) {
+    res.status(result.status).json({ message: result.message });
+    return;
+  }
+
+  //3. Si todo salio bien, respondemos con exito(ej. 201)
+  res
+    .status(result.status)
+    .json({ message: "Usuario registrado exitosamente", user: result.user });
+};
+
+/**
+ * CONTROLADOR DE LOGIN
+ */
+export const loginUser = async (req: Request, res: Response): Promise<void> => {
+  //1. Pasamos el cuerpo de la peticion (req.body) al servicio de login
+  const result = await authService.loginService(req.body);
+
+  //2. Manejo de errores
+  if (result.error) {
+    res.status(result.status).json({ message: result.message });
+    return;
+  }
+
+  //3. Respuesta de exito
+  res
+    .status(result.status)
+    .json({ message: "Login exitoso", token: result.token, user: result.user });
+};
