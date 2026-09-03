@@ -21,7 +21,7 @@
   "name": "clase",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RobertoAntonio25/Repaso_Prisma_Supabase.git"
