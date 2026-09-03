@@ -1,5 +1,5 @@
-import * as interfaces from "../interfaces/product.interface";
-import { prisma } from "../lib/prisma";
+import * as interfaces from "../interfaces/product.interface.js";
+import { prisma } from "../lib/prisma.js";
 
 /**
  * Servicio para crear un nuevo producto

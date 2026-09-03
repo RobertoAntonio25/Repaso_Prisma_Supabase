@@ -1,7 +1,7 @@
-import * as interfaces from "../../interfaces/auth.interface";
-import { comparePassword, hashPassword } from "../bcrypt/bcrypt.service";
-import { generateToken } from "../../utils/token";
-import { prisma } from "../../lib/prisma";
+import * as interfaces from "../../interfaces/auth.interface.js";
+import { comparePassword, hashPassword } from "../bcrypt/bcrypt.service.js";
+import { generateToken } from "../../utils/token/index.js";
+import { prisma } from "../../lib/prisma.js";
 
 export const registerService = async (
   userData: interfaces.RegisterDto,

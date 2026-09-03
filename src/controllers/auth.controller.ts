@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as authService from "../services/auth/auth.service";
+import * as authService from "../services/auth/auth.service.js";
 
 /**
  * CONTROLADOR DE REGISTRO

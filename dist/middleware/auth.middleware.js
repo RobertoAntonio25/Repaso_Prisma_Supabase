@@ -1,4 +1,4 @@
-import { verifyToken } from "../utils/token";
+import { verifyToken } from "../utils/token/index.js";
 /**Guardia 1: verificar que el token JWT sea valido y lo adjunta a la peticion */
 export const verifyTokenMiddleware = (req, res, next) => {
     try {

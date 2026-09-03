@@ -1,15 +1,15 @@
 // 1. IMPORTACIONES PRINCIPALES
 import express from "express";
 import path from "path";
-import authRoutes from "./routes/auth.routes";
-import productRoutes from "./routes/product.routes";
-import uploadRoutes from "./routes/upload.routes";
+import authRoutes from "./routes/auth.routes.js";
+import productRoutes from "./routes/product.routes.js";
+import uploadRoutes from "./routes/upload.routes.js";
 import dotenv from "dotenv";
 // 2. INICIALIZACIÓN
 dotenv.config();
 const app = express();
 // Buena práctica: Usar variables de entorno para el puerto, con un fallback (3000)
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 // 3. MIDDLEWARES GLOBALES (Procesamiento del Master Bus)
 // Esto es vital: le dice a Express que entienda el formato JSON que viene del Frontend
 app.use(express.json());

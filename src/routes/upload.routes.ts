@@ -2,9 +2,9 @@ import { Router, Request, Response, NextFunction } from "express";
 import {
   isAdminMiddleware,
   verifyTokenMiddleware,
-} from "../middleware/auth.middleware";
-import { uploadMiddleware } from "../middleware/upload.middleware";
-import { uploadFile } from "../controllers/upload.controller";
+} from "../middleware/auth.middleware.js";
+import { uploadMiddleware } from "../middleware/upload.middleware.js";
+import { uploadFile } from "../controllers/upload.controller.js";
 
 const router = Router();
 

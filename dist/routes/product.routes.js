@@ -1,6 +1,6 @@
 import { Router } from "express";
-import * as productController from "../controllers/product.controller";
-import { verifyTokenMiddleware, isAdminMiddleware, } from "../middleware/auth.middleware";
+import * as productController from "../controllers/product.controller.js";
+import { verifyTokenMiddleware, isAdminMiddleware, } from "../middleware/auth.middleware.js";
 const router = Router();
 // Endpoint PÚBLICO: Cualquier persona (incluso sin login) puede ver los productos
 router.get("/", productController.getAllProducts);

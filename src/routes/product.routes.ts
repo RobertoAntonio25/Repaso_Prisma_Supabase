@@ -1,9 +1,9 @@
 import { Router } from "express";
-import * as productController from "../controllers/product.controller";
+import * as productController from "../controllers/product.controller.js";
 import {
   verifyTokenMiddleware,
   isAdminMiddleware,
-} from "../middleware/auth.middleware";
+} from "../middleware/auth.middleware.js";
 
 const router = Router();
 

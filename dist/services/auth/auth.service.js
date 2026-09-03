@@ -1,6 +1,6 @@
-import { comparePassword, hashPassword } from "../bcrypt/bcrypt.service";
-import { generateToken } from "../../utils/token";
-import { prisma } from "../../lib/prisma";
+import { comparePassword, hashPassword } from "../bcrypt/bcrypt.service.js";
+import { generateToken } from "../../utils/token/index.js";
+import { prisma } from "../../lib/prisma.js";
 export const registerService = async (userData) => {
     try {
         const { name, email, password } = userData;

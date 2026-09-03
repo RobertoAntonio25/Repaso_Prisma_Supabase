@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { verifyToken } from "../utils/token";
+import { verifyToken } from "../utils/token/index.js";
 
 //Extendemos el Request de express para tipar 'user'
 export interface AuthRequest extends Request {
