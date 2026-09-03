@@ -13,7 +13,7 @@
   },
   "scripts": {
     "postinstall": "prisma skills sync || exit 0 && prisma generate",
-    "start": "tsx src/index.ts",
+    "start": "node dist/index.js",
     "dev": "nodemon --watch src --ext ts --exec node --env-file=.env --import tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "prisma generate && tsc"
@@ -21,7 +21,7 @@
   "name": "clase",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RobertoAntonio25/Repaso_Prisma_Supabase.git"
